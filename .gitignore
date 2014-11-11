@@ -1,3 +1,4 @@
 .DS_Store
 phonegap/platforms/
 phonegap/plugins/
+node/node_modules

@@ -39,5 +39,6 @@ The 12 beacons listed below will be available for the beacon hack day (**Beacon 
 
 ## Helpful Links
 * [Node Bleacons](https://github.com/sandeepmistry/node-bleacon)
+* [Node BLE](https://github.com/sandeepmistry/noble)
 * [Phonegap iBeacon Plugin](https://github.com/petermetz/cordova-plugin-ibeacon)
 * [Phonegap Estimote Plugin](https://github.com/divineprog/phonegap-estimotebeacons)
