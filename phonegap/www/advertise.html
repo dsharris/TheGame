@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Advertise</title>
+  </head>
+  <body>
+    <div id='container'>
+      <h1 id='blob'>Waiting...</h1>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+
+      document.addEventListener('deviceready', function(){
+        var uuid = '8D6D0B57-9EF4-43F7-87E1-75A52C0CE29C';
+        var localName = 'Amundsen';
+        var major = 1000;
+        var minor = 500;
+
+        var blob = document.getElementById('blob');
+        blob.innerHTML = 'Advertising as beacon with uuid ' + uuid;
+
+        cordova.plugins.locationManager.requestAlwaysAuthorization();
+        new cordova.plugins.locationManager.BeaconRegion('local identifier', uuid, major, minor);
+        cordova.plugins.locationManager.startAdvertising(beaconRegion);
+
+      }, false);
+
+    </script>
+  </body>
+</html>

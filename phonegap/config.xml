@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.joelongstreet.beacon-hackday" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Beacon Hackday</name>
+    <description>
+        Sample application showing how to use iBeacons with phonegap
+    </description>
+    <author email="joelongstreet@gmail.com" href="http://joelongstreet.com">
+        Joe Longstreet
+    </author>
+
+    <!-- Change this property to try other beacon methods -->
+    <content src="advertise.html" />
+
+    <access origin="*" />
+</widget>
