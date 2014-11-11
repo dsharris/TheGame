@@ -1,7 +1,13 @@
+# Beacon Hackday
+
+This repository is intended to be a reference for participants in [Barkley's](http://www.barkleyus.com/) Beacon Hackday. One designer is paired with one developer, and over the course of a single day, the two will collaborate to create a project which utilizes beacon technology.
+
+If you're new to beacons, [TechCrunch](http://techcrunch.com/tag/beacons/) has a good series of articles which explain potential use cases.
+
 ## Beacon Terminology
-* Advertise - Broadcast your location
-* Monitor - Get notified when you're in rane of a beacon
-* Range - Determine the distance of a beacon
+* Advertise - Treat a device as a beacon and broadcast your location
+* Monitor - Get notified when you're in range of a transmitting beacon
+* Range - Determine the distance of a transmitting beacon
 
 
 ## Beacon Names
@@ -32,9 +38,9 @@ The 12 beacons listed below will be available for the beacon hack day (**Beacon 
 9. Change the content `src` property in `/phonegap/config.xml` to different HTML files to test beacon advertising, monitoring, or ranging.
 
 
-## Helpful Apps
-* [Particle Detector](https://itunes.apple.com/us/app/particle-detector/id724226138?mt=8)
-* [Estimote](https://itunes.apple.com/us/app/estimote/id686915066?mt=8)
+## Helpful Mobile Apps
+* [Particle Detector](https://itunes.apple.com/us/app/particle-detector/id724226138?mt=8) - Find in range beacons and report their location
+* [Estimote](https://itunes.apple.com/us/app/estimote/id686915066?mt=8) - Series of demos showcasing enhanced beacon functionality via [estimote](http://estimote.com/)
 
 
 ## Helpful Links
