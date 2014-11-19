@@ -153,7 +153,7 @@ var TheGame = (function () {
 				var $holder = $(container).parent();
 				$(container).remove();
 				
-				$holder.append('<h1> YOU WIN!!!</h1>');
+				$holder.append('<div class="you-win"><h1>You have captured base 1</h1></div>');
 			};
 
 		return {
