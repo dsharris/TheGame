@@ -1,0 +1,57 @@
+// Settings & Standards
+
+// Colors
+
+$black: rgba(33, 31, 30, 1.0);
+$white: rgba(243, 229, 191, 1.0);
+$green: rgba(16, 116, 113, 1.0);
+$red: rgba(230, 85, 59, 1.0);
+
+
+// Typography
+
+@import url(http://fonts.googleapis.com/css?family=Jockey+One);
+@import url(http://fonts.googleapis.com/css?family=Ruda:700,400);
+
+body, p{
+	font-family: 'ruda', sans-serf;
+	font-size: 18px;
+	line-height: 1.67em;
+}
+
+h1{
+	font-family: 'Jockey One', sans-serif;
+	font-weight: 400;
+}
+
+
+// Button
+
+button, .button{
+	border-style: solid;
+	border-width: 0px;
+	cursor: pointer;
+	font-family: 'ruda', sans-serf;
+	font-weight: normal;
+	line-height: normal;
+	margin: 0 0 1em;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	display: inline-block;
+	padding-top: 0.75em;
+	padding-right: 1.5em;
+	padding-bottom: 0.75em;
+	padding-left: 1.5em;
+	font-size: 0.9em;
+	background-color: $red;
+	border-color: #007095;
+	color: white;
+	transition: background-color 100ms ease-out;
+
+	&:hover, &:focus, &:active{
+		background: darken($red, 5%);
+	}
+}
