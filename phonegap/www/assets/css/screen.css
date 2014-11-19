@@ -2579,7 +2579,7 @@ h1 {
   font-weight: 400;
 }
 
-button, .button {
+.button {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
@@ -2603,7 +2603,7 @@ button, .button {
   color: white;
   transition: background-color 100ms ease-out;
 }
-button:hover, button:focus, button:active, .button:hover, .button:focus, .button:active {
+.button:hover, .button:focus, .button:active {
   background: #e7411d;
   color: #f3e5bf;
   text-decoration: none;
@@ -2671,6 +2671,38 @@ body {
   transition: width .6s ease;
 }
 
+.touch-target {
+  background: #f3e5bf;
+  color: #211f1e;
+  border-radius: 50%;
+  text-align: center;
+}
+
+/*
+.touch-taget{
+	box-shadow: 0 0 5px $white;
+    -webkit-animation: pulse 300ms ease-in-out infinite;
+    -moz-animation: pulse 300ms ease-in-out infinite;
+    animation: pulse 300ms ease-in-out infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {box-shadow: 0 0 5px $white;}
+    50% {box-shadow: 0 0 10px $white;}
+    100% {box-shadow: 0 0 5px $white;}
+}
+@-moz-keyframes pulse {
+    0% {box-shadow: 0 0 5px $white;}
+    50% {box-shadow: 0 0 10px $white;}
+    100% {box-shadow: 0 0 5px $white;}
+}
+@keyframes pulse {
+    0% {box-shadow: 0 0 5px $white;}
+    50% {box-shadow: 0 0 10px $white;}
+    100% {box-shadow: 0 0 5px $white;}
+}
+
+*/
 ul.listing-group {
   margin: 0;
   padding: 0;

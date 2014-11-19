@@ -42,12 +42,12 @@ var TheGame = (function () {
 
 				} else {
 					$target.css({
-						'background-color': '#F00000'
+						'background-color': '#e95434'
 					});
 
 					setTimeout(function () {
 						$target.css({
-							'background-color': '#FFFFFF'
+							'background-color': '#00938f'
 						});
 					}, 250);
 				}
@@ -88,10 +88,6 @@ var TheGame = (function () {
 						'style="',
 						'display:none;',
 						'position:absolute;',
-						'background:#fff;',
-						'border-radius: 50%;',
-						'color: #000;',
-						'text-align: center;',
 						'line-height:',
 						targetHeight,
 						'px;height:',

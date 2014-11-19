@@ -65,3 +65,40 @@ body{
 		transition: width .6s ease;
 	}
 }
+
+
+// Touch Target
+
+.touch-target{
+	background: $white;
+	color: $black;
+	border-radius: 50%;
+	text-align: center;
+
+}
+
+/*
+.touch-taget{
+	box-shadow: 0 0 5px $white;
+    -webkit-animation: pulse 300ms ease-in-out infinite;
+    -moz-animation: pulse 300ms ease-in-out infinite;
+    animation: pulse 300ms ease-in-out infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {box-shadow: 0 0 5px $white;}
+    50% {box-shadow: 0 0 10px $white;}
+    100% {box-shadow: 0 0 5px $white;}
+}
+@-moz-keyframes pulse {
+    0% {box-shadow: 0 0 5px $white;}
+    50% {box-shadow: 0 0 10px $white;}
+    100% {box-shadow: 0 0 5px $white;}
+}
+@keyframes pulse {
+    0% {box-shadow: 0 0 5px $white;}
+    50% {box-shadow: 0 0 10px $white;}
+    100% {box-shadow: 0 0 5px $white;}
+}
+
+*/
