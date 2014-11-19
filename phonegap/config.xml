@@ -9,7 +9,7 @@
     </author>
 
     <!-- Change this property to try other beacon methods -->
-    <content src="range.html" />
+    <content src="index.html" />
 
     <access origin="*" />
 </widget>

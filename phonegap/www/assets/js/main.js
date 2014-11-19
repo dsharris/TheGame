@@ -2,14 +2,113 @@ var TheGame = (function () {
 	var numericChallenge = (function () {
 		var token = null,
 			endpoint = 'http://127.0.0.1:4263/attack'
+			targetCount = 5,
+			startTime = 0,
+			finishTime = 0,
+			currentPosition = 0,
+			targets = {},
+
 			start = function () {
 				requestToken();
+				createTargets();
+				bindActions();
 			},
 			end = function () {
 
 			},
-			createTargets = function () {
+			bindActions = function () {
+				$('body').on('click tap touch', '.game-start-trigger', startItUp);
+				$('body').on('click tap touch', '.touch-target', targetHit);
+			},
+			startItUp = function () {
+				startTime = Date.now();
+				currentPosition = 1;
+				$('.game-start-trigger').remove();
+				$('.touch-target').show();
+			},
+			targetHit = function (e) {
+				$target = $(this);
 
+				if ($target.data('num') == currentPosition) {
+					$target.fadeOut(250);
+					currentPosition = $target.data('num') + 1;
+
+					targets[$target.data('num')] = Date.now();
+
+					if ($target.data('num') == targetCount) {
+						finishTime = Date.now();
+						cleanupTimes();
+					}
+
+				} else {
+					$target.css({
+						'background-color': '#F00000'
+					});
+
+					setTimeout(function () {
+						$target.css({
+							'background-color': '#FFFFFF'
+						});
+					}, 250);
+				}
+			}
+			cleanupTimes = function () {
+				_.each(targets, function (t, i) {
+					targets[i] = parseInt(t, 10) - parseInt(startTime, 10);
+				});
+
+				console.log(startTime, targets, finishTime);
+			}
+			createTargets = function () {
+				var $win = $(window),
+					targetHeight = 40,
+					button = '<button class="game-start-trigger">Start Game</button>',
+					targetWidth = 40,
+					winHeight = $win.height(),
+					winWidth = $win.width(),
+					maxTop = winHeight - targetHeight,
+					maxLeft = winWidth - targetWidth,
+					i, top, left;
+
+					console.log(maxTop, maxLeft);
+
+					$('body').append(button);
+
+				for (i=0; i < targetCount; i++) {
+
+
+					top = Math.floor(Math.random() * maxTop) + 1;
+					left = Math.floor(Math.random() * maxLeft) + 1;
+					console.log(i, top, left);
+					$('body').append([
+						'<div ',
+						'data-num="',
+						(i+1),
+						'" class="touch-target" ',
+						'style="',
+						'display:none;',
+						'position:absolute;',
+						'background:#fff;',
+						'border-radius: 50%;',
+						'color: #000;',
+						'text-align: center;',
+						'line-height:',
+						targetHeight,
+						'px;height:',
+						targetHeight,
+						'px; width:',
+						targetWidth,
+						'px; top:',
+						(top > maxTop) ? maxTop : top,
+						'px;left:',
+						(left > maxLeft) ? maxLeft : left,
+						'px;" id="target-',
+						(i + 1),
+						'">',
+						(i + 1),
+						'</div>'
+					].join(''));
+				}
 			},
 			requestToken = function () {
 				$.get(endpoint, function () {
