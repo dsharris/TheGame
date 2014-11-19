@@ -17,6 +17,9 @@ var TheGame = (function () {
 
 			end = function () {
 				$(container).append('<h1>Total Time ' + ((finishTime - startTime) / 1000) + ' Seconds</h1>');
+				setTimeout(function () {
+					 $(container).append("<h1>Other player took longer, You've won!!</h1>");
+				})
 			},
 
 			bindGameActions = function () {
