@@ -9,29 +9,24 @@ var TheGame = (function () {
 			targets = {},
 
 			start = function () {
-				alert('start');
 				requestToken();
 				createTargets();
 				bindActions();
 			},
 			end = function () {
-				alert('end');
 
 			},
 			bindActions = function () {
-				alert('bindActions');
 				$('body').on('click tap touch', '.game-start-trigger', startItUp);
 				$('body').on('click tap touch', '.touch-target', targetHit);
 			},
 			startItUp = function () {
-				alert('startItUp');
 				startTime = Date.now();
 				currentPosition = 1;
 				$('.game-start-trigger').remove();
 				$('.touch-target').show();
 			},
 			targetHit = function (e) {
-				alert('targetHit');
 				$target = $(this);
 
 				if ($target.data('num') == currentPosition) {
@@ -58,7 +53,6 @@ var TheGame = (function () {
 				}
 			}
 			cleanupTimes = function () {
-				alert('cleanupTimes');
 				_.each(targets, function (t, i) {
 					targets[i] = parseInt(t, 10) - parseInt(startTime, 10);
 				});
@@ -66,7 +60,6 @@ var TheGame = (function () {
 				console.log(startTime, targets, finishTime);
 			}
 			createTargets = function () {
-				alert('createTargets');
 				var $win = $(window),
 					targetHeight = 40,
 					button = '<button class="game-start-trigger">Start Game</button>',
@@ -88,7 +81,7 @@ var TheGame = (function () {
 					left = Math.floor(Math.random() * maxLeft) + 1;
 					console.log(i, top, left);
 					$('body').append([
-						'<div ',
+						'<button ',
 						'data-num="',
 						(i+1),
 						'" class="touch-target" ',
@@ -113,19 +106,17 @@ var TheGame = (function () {
 						(i + 1),
 						'">',
 						(i + 1),
-						'</div>'
+						'</button>'
 					].join(''));
 				}
 			},
 			requestToken = function () {
-				alert('requestToken');
 				$.get(endpoint, function () {
 					console.log(arguments);
 				});
 
 			},
 			init = function () {
-				alert('init');
 				start();
 			};
 		return  {
@@ -136,7 +127,6 @@ var TheGame = (function () {
 	}()),
 
 	init = function () {
-		alert('init');
 		console.log('initializing the game');
 		numericChallenge.init();
 	}
