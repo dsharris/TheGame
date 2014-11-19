@@ -2691,6 +2691,12 @@ body {
   text-align: center;
 }
 
+.game-start-trigger {
+  position: absolute;
+  top: 50%;
+  left: 34%;
+}
+
 .touch-target {
   background: #f3e5bf;
   border: none;
