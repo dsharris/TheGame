@@ -10,21 +10,59 @@
     <title>Range</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Style Guide</h1>
-      <p>For our game!</p>
-      <button>Button</button>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Major</th>
-            <th>Minor</th>
-            <th>Distance</th>
-            <th>RSSI</th>
-          </tr>
-        </thead>
-        <tbody id='blob'><tbody>
-      </table>
+
+    <div class="app-header">
+      <img class="pull-right" src="assets/images/the-game-header-logo.png" height="20">
+    </div>
+
+    <div class="app-body">
+
+      <ul class="listing-group">
+        <li class="listing-title">
+        <img class="pull-right" src="assets/images/map-marker.png" height="35">
+        Near You</li>
+        <li>
+          <a href="#">
+            <div class="listing-right">
+              <img class="img-circle" src="assets/images/player-1-avatar.png" height="70">
+            </div>
+            <div class="listing-left">
+              <h2>Player 1</h2>
+              <p>Distance: ~1m away</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="listing-right">
+              <img class="img-circle" src="assets/images/player-2-avatar.png" height="70">
+            </div>
+            <div class="listing-left">
+              <h2>Enemy Base</h2>
+              <p>Distance: 10m away</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="listing-right">
+              <img class="img-circle" src="assets/images/base-marker.png" height="70">
+            </div>
+            <div class="listing-left">
+              <h2>Enemy Base</h2>
+              <p>Distance: 10m away</p>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="app-footer">
+      <div class="player-health">
+        <div class="health-bar" style="width: 60%;"><span>60%</span></div>
+      </div>
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
