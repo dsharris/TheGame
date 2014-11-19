@@ -12,14 +12,14 @@ var TheGame = (function () {
 			start = function () {
 				requestToken();
 				createTargets();
-				bindActions();
+				bindGameActions();
 			},
 			end = function () {
 
 			},
-			bindActions = function () {
-				$(container).on('click tap touch', '.game-start-trigger', startItUp);
-				$(container).on('click tap touch', '.touch-target', targetHit);
+			bindGameActions = function () {
+				$('body').on('click tap touch', '.game-start-trigger', startItUp);
+				$('body').on('click tap touch', '.touch-target', targetHit);
 			},
 			startItUp = function () {
 				startTime = Date.now();
@@ -119,7 +119,6 @@ var TheGame = (function () {
 		return  {
 			init : init,
 			start : start,
-			end : end
 		};
 	}()),
 
