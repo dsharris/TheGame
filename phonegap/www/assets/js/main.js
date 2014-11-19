@@ -18,8 +18,8 @@ var TheGame = (function () {
 
 			},
 			bindActions = function () {
-				$('body').on('click tap touch', '.game-start-trigger', startItUp);
-				$('body').on('click tap touch', '.touch-target', targetHit);
+				$(container).on('click tap touch', '.game-start-trigger', startItUp);
+				$(container).on('click tap touch', '.touch-target', targetHit);
 			},
 			startItUp = function () {
 				startTime = Date.now();
@@ -140,7 +140,8 @@ var TheGame = (function () {
 				$('body').on('touchstart', '.blow-it-up', startTimer);
 				$('body').on('touchend', '.blow-it-up', endTimer);
 			},
-			startTimer = function () {
+			startTimer = function (e) {
+				e.preventDefault();
 				console.log('startTimer');
 				timer = window.setTimeout(complete, 5000);
 			},
