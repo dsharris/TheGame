@@ -14,19 +14,23 @@ var TheGame = (function () {
 				createTargets();
 				bindGameActions();
 			},
-			end = function () {
 
+			end = function () {
+				$(container).append('<h1>Total Time ' + ((finishTime - startTime) / 1000) + ' Seconds</h1>');
 			},
+
 			bindGameActions = function () {
 				$('body').on('click tap touch', '.game-start-trigger', startItUp);
 				$('body').on('click tap touch', '.touch-target', targetHit);
 			},
+
 			startItUp = function () {
 				startTime = Date.now();
 				currentPosition = 1;
 				$('.game-start-trigger').remove();
 				$('.touch-target').show();
 			},
+
 			targetHit = function (e) {
 				$target = $(this);
 
@@ -58,7 +62,7 @@ var TheGame = (function () {
 					targets[i] = parseInt(t, 10) - parseInt(startTime, 10);
 				});
 
-				console.log(startTime, targets, finishTime);
+				end();
 			}
 			createTargets = function () {
 				var $win = $(container),
@@ -152,7 +156,7 @@ var TheGame = (function () {
 			complete = function () {
 				var $holder = $(container).parent();
 				$(container).remove();
-				
+
 				$holder.append('<h1> YOU WIN!!!</h1>');
 			};
 
