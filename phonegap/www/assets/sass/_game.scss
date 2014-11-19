@@ -73,6 +73,8 @@ body{
 	height: 500px;
 	background: darken($black, 5%);
 	padding: 30px;
+	background-image: url(../images/game-background.png);
+	background-size: cover;
 }
 
 .game-rules{
