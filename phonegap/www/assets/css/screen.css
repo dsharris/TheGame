@@ -2707,23 +2707,73 @@ body {
     animation: pulse 300ms ease-in-out infinite;
 }
 
+*/
 @-webkit-keyframes pulse {
-    0% {box-shadow: 0 0 5px $white;}
-    50% {box-shadow: 0 0 10px $white;}
-    100% {box-shadow: 0 0 5px $white;}
+  0% {
+    box-shadow: 0 0 5px #f3e5bf;
+  }
+  50% {
+    box-shadow: 0 0 10px #f3e5bf;
+  }
+  100% {
+    box-shadow: 0 0 5px #f3e5bf;
+  }
 }
 @-moz-keyframes pulse {
-    0% {box-shadow: 0 0 5px $white;}
-    50% {box-shadow: 0 0 10px $white;}
-    100% {box-shadow: 0 0 5px $white;}
+  0% {
+    box-shadow: 0 0 5px #f3e5bf;
+  }
+  50% {
+    box-shadow: 0 0 10px #f3e5bf;
+  }
+  100% {
+    box-shadow: 0 0 5px #f3e5bf;
+  }
 }
 @keyframes pulse {
-    0% {box-shadow: 0 0 5px $white;}
-    50% {box-shadow: 0 0 10px $white;}
-    100% {box-shadow: 0 0 5px $white;}
+  0% {
+    box-shadow: 0 0 5px #f3e5bf;
+  }
+  50% {
+    box-shadow: 0 0 10px #f3e5bf;
+  }
+  100% {
+    box-shadow: 0 0 5px #f3e5bf;
+  }
+}
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
 }
 
-*/
 .home-screen {
   padding-top: 100px;
   text-align: center;
@@ -2751,6 +2801,11 @@ body {
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+.base-attack-div .blow-it-up:focus, .base-attack-div .blow-it-up:active {
+  -webkit-animation: shake 500ms ease-in-out infinite;
+  -moz-animation: shake 500ms ease-in-out infinite;
+  animation: shake 500ms ease-in-out infinite;
 }
 
 ul.listing-group {

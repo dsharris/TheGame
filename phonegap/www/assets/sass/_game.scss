@@ -101,6 +101,11 @@ body{
     animation: pulse 300ms ease-in-out infinite;
 }
 
+*/
+
+
+// Animations
+
 @-webkit-keyframes pulse {
     0% {box-shadow: 0 0 5px $white;}
     50% {box-shadow: 0 0 10px $white;}
@@ -117,7 +122,44 @@ body{
     100% {box-shadow: 0 0 5px $white;}
 }
 
-*/
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shake {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+}
 
 
 // Home Screen
@@ -151,12 +193,17 @@ body{
 		width: 200px;
 
 		margin: 0 auto;
-		
+
 		-webkit-user-select: none;
 		-khtml-user-select: none;
 		-moz-user-select: none;
 		-o-user-select: none;
 		user-select: none;
-
+		
+		&:focus, &:active{
+		    -webkit-animation: shake 500ms ease-in-out infinite;
+		    -moz-animation: shake 500ms ease-in-out infinite;
+		    animation: shake 500ms ease-in-out infinite;
+		}
 	}
 }
