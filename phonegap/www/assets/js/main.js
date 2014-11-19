@@ -123,16 +123,51 @@ var TheGame = (function () {
 		};
 	}()),
 
+	attackBase = (function () {
+		var container = '.base-attack-div',
+			timer = null,
+
+			init = function () {
+				console.log('init');
+
+				$button = $('<div style="height:200px;" class="blow-it-up">Hold to Capture Base</div>');
+				$(container).append($button);
+
+				bindActions();
+			},
+			bindActions = function () {
+				console.log('bindActions');
+				$('body').on('touchstart', '.blow-it-up', startTimer);
+				$('body').on('touchend', '.blow-it-up', endTimer);
+			},
+			startTimer = function () {
+				console.log('startTimer');
+				timer = window.setTimeout(complete, 5000);
+			},
+			endTimer = function () {
+				console.log('endTimer');
+				window.clearTimeout(timer);
+				timer = null;
+			},
+			complete = function () {
+				var $holder = $(container).parent();
+				$(container).remove();
+				
+				$holder.append('<h1> YOU WIN!!!</h1>');
+			};
+
+		return {
+			init: init
+		};
+	}()),
+
 	bindActions = function () {
 
-	},
-
-	init = function () {
-
-	}
+	};
 
 	return {
-		init: init,
-		attackPlayer : numericChallenge.
+		attackPlayer : numericChallenge,
+		attackBase: attackBase
 	};
-}());
+
+}()) ;

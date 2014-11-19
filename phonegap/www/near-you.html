@@ -85,7 +85,6 @@
       };
 
       document.addEventListener('deviceready', function(){
-        alert('device ready');
         EstimoteBeacons.requestAlwaysAuthorization();
         EstimoteBeacons.startRangingBeaconsInRegion({}, onRegion, onError);
       }, false);
