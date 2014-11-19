@@ -2579,7 +2579,7 @@ h1 {
   font-weight: 400;
 }
 
-.button {
+.button, .base-attack-div .blow-it-up {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
@@ -2603,7 +2603,7 @@ h1 {
   color: white;
   transition: background-color 100ms ease-out;
 }
-.button:hover, .button:focus, .button:active {
+.button:hover, .base-attack-div .blow-it-up:hover, .button:focus, .base-attack-div .blow-it-up:focus, .button:active, .base-attack-div .blow-it-up:active {
   background: #e7411d;
   color: #f3e5bf;
   text-decoration: none;
@@ -2630,7 +2630,7 @@ body {
   right: 0;
   width: 100%;
   margin: 0;
-  padding: 10px 30px;
+  padding: 30px 30px 10px 30px;
   min-height: 60px;
   background: #000;
   color: #f3e5bf;
@@ -2731,6 +2731,26 @@ body {
 
 .game-logo-big {
   margin: 0 auto;
+}
+
+.base-attack-div {
+  text-align: center;
+  margin-top: 50px;
+}
+.base-attack-div h1 {
+  margin-bottom: 50px;
+}
+.base-attack-div .blow-it-up {
+  font-family: 'Jockey One', sans-serif;
+  font-weight: 400;
+  font-size: 1.8em;
+  width: 200px;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 ul.listing-group {
