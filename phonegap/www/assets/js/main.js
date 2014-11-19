@@ -12,12 +12,12 @@ var TheGame = (function () {
 			start = function () {
 				requestToken();
 				createTargets();
-				bindActions();
+				bindGameActions();
 			},
 			end = function () {
 
 			},
-			bindActions = function () {
+			bindGameActions = function () {
 				$('body').on('click tap touch', '.game-start-trigger', startItUp);
 				$('body').on('click tap touch', '.touch-target', targetHit);
 			},
@@ -119,7 +119,6 @@ var TheGame = (function () {
 		return  {
 			init : init,
 			start : start,
-			end : end
 		};
 	}()),
 
@@ -140,7 +139,8 @@ var TheGame = (function () {
 				$('body').on('touchstart', '.blow-it-up', startTimer);
 				$('body').on('touchend', '.blow-it-up', endTimer);
 			},
-			startTimer = function () {
+			startTimer = function (e) {
+				e.preventDefault();
 				console.log('startTimer');
 				timer = window.setTimeout(complete, 5000);
 			},
