@@ -14,7 +14,7 @@ body{
 	right: 0;
 	width: 100%;
 	margin: 0;
-	padding: 10px 30px;
+	padding: 30px 30px 10px 30px;
 	min-height: 60px;
 	background: #000;
 	color: $white;
@@ -129,4 +129,34 @@ body{
 
 .game-logo-big{
 	margin: 0 auto;
+}
+
+
+// Attack base
+
+.base-attack-div{
+	text-align: center;
+	margin-top: 50px;
+
+	h1{
+		margin-bottom: 50px;
+	}
+
+	.blow-it-up{
+		@extend .button;
+
+		font-family: 'Jockey One', sans-serif;
+		font-weight: 400;
+		font-size: 1.8em;
+		width: 200px;
+
+		margin: 0 auto;
+		
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+
+	}
 }
