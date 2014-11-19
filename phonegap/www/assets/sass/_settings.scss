@@ -49,7 +49,7 @@ h1{
 	font-size: 0.9em;
 	background-color: $red;
 	border-color: #007095;
-	color: white;
+	color: $white;
 	transition: background-color 100ms ease-out;
 
 	&:hover, &:focus, &:active{

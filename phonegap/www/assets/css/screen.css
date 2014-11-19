@@ -2600,7 +2600,7 @@ h1 {
   font-size: 0.9em;
   background-color: #e95434;
   border-color: #007095;
-  color: white;
+  color: #f3e5bf;
   transition: background-color 100ms ease-out;
 }
 .button:hover, .base-attack-div .blow-it-up:hover, .button:focus, .base-attack-div .blow-it-up:focus, .button:active, .base-attack-div .blow-it-up:active {
@@ -2806,6 +2806,14 @@ body {
   -webkit-animation: shake 500ms ease-in-out infinite;
   -moz-animation: shake 500ms ease-in-out infinite;
   animation: shake 500ms ease-in-out infinite;
+}
+
+.you-win {
+  text-align: center;
+}
+.you-win h1 {
+  font-size: 3em;
+  text-transform: uppercase;
 }
 
 ul.listing-group {
