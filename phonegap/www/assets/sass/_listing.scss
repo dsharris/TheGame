@@ -1,0 +1,60 @@
+// Listing Group
+
+ul.listing-group{
+	margin: 0;
+	padding: 0;
+	background-color: lighten($black, 3%);
+
+	li{
+		a{
+		
+			margin-bottom: 0;
+			border: 0 none;
+			border-bottom: 1px solid $black;
+			position: relative;
+			display: block;
+			padding: 10px 30px ;
+			color: $white;
+			overflow: auto;
+		
+			&:hover, &:focus, &:active{
+				text-decoration: none; 
+				background-color: lighten($black, 6%);
+			}
+		}
+
+		h2{
+			margin-top: 5px;
+			margin-bottom: 0px;
+			font-family: 'Jockey One', sans-serif;
+			font-weight: 400;		
+		}
+
+		p{
+			color: $blue;
+			margin-top: 0;
+			font-size: 14px;
+		}
+	}
+}
+
+.listing-title{
+	background: $blue;
+	color: $black;
+	text-align: left;
+	padding: 10px 30px ;
+	font-family: 'Jockey One', sans-serif;
+	font-weight: 400;
+	font-size: 2em;
+	display: block;
+	line-height: 1em;
+}
+
+.listing-right{
+	float: right !important; 
+}
+
+.listing-left{
+	overflow: hidden;
+zoom: 1;
+}

@@ -4,8 +4,9 @@
 
 $black: rgba(33, 31, 30, 1.0);
 $white: rgba(243, 229, 191, 1.0);
-$green: rgba(16, 116, 113, 1.0);
-$red: rgba(230, 85, 59, 1.0);
+$blue: #00938f;
+$red: #e95434;
+
 
 
 // Typography
@@ -53,5 +54,7 @@ button, .button{
 
 	&:hover, &:focus, &:active{
 		background: darken($red, 5%);
+		color: $white;
+		text-decoration: none;
 	}
 }
