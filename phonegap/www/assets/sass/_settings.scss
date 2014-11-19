@@ -58,3 +58,10 @@ h1{
 		text-decoration: none;
 	}
 }
+
+.button-blue{
+	background: $blue;
+	&:hover, &:focus, &:active{
+		background: darken($blue, 5%);
+	}
+}

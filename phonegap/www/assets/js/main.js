@@ -63,7 +63,7 @@ var TheGame = (function () {
 			createTargets = function () {
 				var $win = $(container),
 					targetHeight = 40,
-					button = '<button class="game-start-trigger">Start Game</button>',
+					button = '<button class="button game-start-trigger">Start Game</button>',
 					targetWidth = 40,
 					winHeight = $win.height(),
 					winWidth = $win.width(),
