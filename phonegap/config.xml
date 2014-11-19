@@ -9,7 +9,7 @@
     </author>
 
     <!-- Change this property to try other beacon methods -->
-    <content src="index.html" />
+    <content src="near-you.html" />
 
     <access origin="*" />
 </widget>

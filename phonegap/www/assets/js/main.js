@@ -3,6 +3,7 @@ var TheGame = (function () {
 		var token = null,
 			endpoint = 'http://127.0.0.1:4263/attack'
 			targetCount = 5,
+			container = '.game-div',
 			startTime = 0,
 			finishTime = 0,
 			currentPosition = 0,
@@ -60,7 +61,7 @@ var TheGame = (function () {
 				console.log(startTime, targets, finishTime);
 			}
 			createTargets = function () {
-				var $win = $(window),
+				var $win = $(container),
 					targetHeight = 40,
 					button = '<button class="game-start-trigger">Start Game</button>',
 					targetWidth = 40,
