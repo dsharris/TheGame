@@ -123,12 +123,16 @@ var TheGame = (function () {
 		};
 	}()),
 
+	bindActions = function () {
+
+	},
+
 	init = function () {
-		console.log('initializing the game');
-		numericChallenge.init();
+
 	}
 
 	return {
-		init: init
+		init: init,
+		attackPlayer : numericChallenge.
 	};
 }());
